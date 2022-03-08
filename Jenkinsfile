@@ -27,7 +27,7 @@ node('we-cmdb') {
         imageName = "${env.registryName}:${env.PRO_ENV}_${BUILD_NUMBER}"
 
     }
-
+    /*
     stage('Build Package') {
         docker.image(maven_image).inside("--name '${build_name}' -v /data/repository:/usr/src/mymaven/repository   -v '${env.current_dir}'/build/maven_settings.xml:/usr/share/maven/ref/settings-docker.xml  -v '${env.current_dir}':/usr/src/mymaven -w /usr/src/mymaven") {
             sh 'mvn -U clean install -Dmaven.test.skip=true -s /usr/share/maven/ref/settings-docker.xml dependency:resolve'
@@ -42,6 +42,6 @@ node('we-cmdb') {
             customImage.push()
         }
  
-    }
+    }*/
 
 }
