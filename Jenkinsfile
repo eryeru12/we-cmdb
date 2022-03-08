@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurper
 
-node('master') {
+node('we-cmdb') {
     currentBuild.result = "SUCCESS"
 
     def maven_image = 'maven:3.8.4-openjdk-8-slim'
