@@ -42,7 +42,7 @@
                                                         <goal>npm</goal>
                                                 </goals>
                                                 <configuration>
-                                                        <arguments>npm config set set sass_binary_site https://npm.taobao.org/mirrors/node-sass/</arguments>
+                                                        <arguments>config set set sass_binary_site https://npm.taobao.org/mirrors/node-sass/</arguments>
                                                 </configuration>
                                         </execution>
 
