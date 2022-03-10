@@ -35,6 +35,17 @@
 							<nodeDownloadRoot>http://npm.taobao.org/mirrors/node/</nodeDownloadRoot>
 						</configuration>
 					</execution>
+
+					<execution>
+                                                <id>npm config</id>
+                                                <goals>
+                                                        <goal>npm</goal>
+                                                </goals>
+                                                <configuration>
+                                                        <arguments>npm config set set sass_binary_site https://npm.taobao.org/mirrors/node-sass/</arguments>
+                                                </configuration>
+                                        </execution>
+
 					<execution>
 						<id>npm install</id>
 						<goals>
