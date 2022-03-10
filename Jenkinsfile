@@ -26,7 +26,7 @@ node('we-cmdb') {
         }
         imageName = "${env.registryName}:${env.PRO_ENV}_${BUILD_NUMBER}"
         sh 'curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo'
-        sh 'yum install yarn -y && yarn install'
+        sh 'yum install yarn -y && yarn install --cwd ./cmdb-ui'
     }
 
     stage('Build Package') {
