@@ -1,0 +1,4 @@
+{
+    "registry-mirrors": ["https://kdfentqg.mirror.aliyuncs.com"],
+    "insecure-registries": ["124.222.89.4:5001"]
+}
