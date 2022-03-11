@@ -31,7 +31,7 @@ node('we-cmdb') {
 
 
     stage('Build Docker image'){
-        def customImage = docker.build(imageName, "-f build/db/Dockerfile --build-arg PRO_ENV=${env.PRO_ENV} .")
+        def customImage = docker.build(imageName, "-f build/db/Dockerfile --build-arg PRO_ENV=${env.PRO_ENV} ./build/db/")
 
         docker.withRegistry("http://${env.registryName}") {
             /* Push the container to the custom Registry */
