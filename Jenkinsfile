@@ -25,6 +25,7 @@ node('we-cmdb') {
            env.PRO_ENV = "Test"
         }
         imageName = "${env.registryName}:${env.PRO_ENV}_${BUILD_NUMBER}"
+        build_name = "${build_name}-${env.PRO_ENV}_${BUILD_NUMBER}"
     }
 
     stage('Build Package') {
