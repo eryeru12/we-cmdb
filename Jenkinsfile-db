@@ -26,6 +26,7 @@ node('we-cmdb') {
         }
         imageName = "${env.registryName}:${env.PRO_ENV}_${BUILD_NUMBER}"
         build_name = "${build_name}-${env.PRO_ENV}_${BUILD_NUMBER}"
+        sh 'build/db/build-image.sh'
     }
 
 
