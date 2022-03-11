@@ -3,7 +3,7 @@ import groovy.json.JsonSlurper
 node('we-cmdb') {
     currentBuild.result = "SUCCESS"
 
-    def maven_image = 'maven:3.3-jdk-8'
+    def maven_image = 'maven:3.8.4-openjdk-8-slim'
     def build_name = 'wecmdb-build'
     env.registryName = "124.222.89.4:5001/wecmdb-sen"
     env.current_dir = ''
@@ -25,8 +25,6 @@ node('we-cmdb') {
            env.PRO_ENV = "Test"
         }
         imageName = "${env.registryName}:${env.PRO_ENV}_${BUILD_NUMBER}"
-        sh 'curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo'
-        sh 'yum install yarn -y && yarn install --cwd ./cmdb-ui'
     }
 
     stage('Build Package') {
